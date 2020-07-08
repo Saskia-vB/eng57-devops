@@ -116,3 +116,4 @@ If the real copy is deleted, the link will work, because it accesses the underly
 This will show the current permissions for files and folders.
 The output will resemble:
 -rwxr--rw- 1 user user 0 Jan 19 12:59 file1.txt
+hi

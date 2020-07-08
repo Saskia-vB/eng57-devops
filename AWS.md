@@ -86,6 +86,7 @@
 - can be found on both EC2 and VPC dashboards for AWS
 - webserver needs HTTP(port 80) and HTTPS(port 443) as a minimum to access it
 - database server i.e. SQL server(port 1433), mangodb(27017)
+- instance basis
 ### rules:
 - by default they allow all outbound traffic
 - security group rules are allows permissive, you are allowing rather than denying it
@@ -96,11 +97,20 @@
 ## Network Access Control List (NACL)
 - optional layer of security to control access between route tables and subnets
 - configured to allow all traffic for the subnet it is associated
-- * ensures that if a packet doesn't match any of the other numbered rules  it's access is denied
+- * ensures that if a packet doesn't match any of the other numbered rules it's access is denied
   - you can't modify or remove this rule
-- rules are wider 
+- rules are wider
+- you need to specify both rules in and out
+- they are stateless
+- there is an order to the rules
+- Public NACL - rules in:
+- subnet basis
+
 ### rules:
 - each subnet in your VPC must be associated with an ACL
 - a subnet can only be associated with one ACL however, one ACL can be associated with multiple subnets
 - an ACL contains a list of numbered rules which are evaluated in order, starting with the lowest
 - ACLs are stateless, responses to allow inbound traffic are subject to the rules for outbound traffic
+
+## Jenkins on AWS
+- 
