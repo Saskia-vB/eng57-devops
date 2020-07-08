@@ -2,6 +2,7 @@
 Create a bastion server that can jump box. This will allow you to access the DB
 
 Pre-requisites:
+- have a VPC running
 - make sure mongodb is no longer running:
   - in terminal go to repo multi-vagrant-code along
   - ssh into DB instance: sudo service mongod stop
