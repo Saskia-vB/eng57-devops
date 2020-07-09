@@ -9,7 +9,7 @@
     - Type: Custom TCP rule, Port range: 8080  
 
 #### Install Java
-- ssh into Jenkins instance from root of repo (multi-vagrant-code-along)
+- ssh into Jenkins instance from root of repo (eng57-multi-vagrant)
 - sudo apt update
 - sudo apt search openjdk
 - sudo apt install openjdk-8-jdk
@@ -45,6 +45,6 @@
 - fill in all the fields and become an admin user!
 
 #### Create pipeline
-- view previous documentation (cf multi-vagrant-code-along repo README)
+- view previous documentation (cf eng57-multi-vagrant repo README)
 - Github webhook: http://instance_public_IP:8080/github-webhook/
   - had to delete and re input before it worked
