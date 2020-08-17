@@ -1,6 +1,6 @@
 # Virtual Private cloud
 - enables you to launch AWS resources into a virtual network that you defined. It resembles a traditional network that you'd operate in your own data centre, with the benefits of using the scalable infrastructure of AWS.
-- each amazon account comes with a default VPC so you can start straight always
+- each amazon account comes with a default VPC so you can start straight away
 - VPC is within a region
 - CIDR block for default VPS is always 16 subnet mask
 - why not use just default? customising makes it more secure
@@ -60,7 +60,7 @@
 - go to routes table > subnet > edit:
   - associate public subnet
 
-## Netwoork Address Translation (NAT) Devices
+## Network Address Translation (NAT) Devices
 - for instances in the private subnet to have internet access
 - but prevents the internet from creating instances in the private subnet
 - forwards traffic from your private subnet to the internet and then send the response back to the instances
@@ -113,4 +113,4 @@
 - ACLs are stateless, responses to allow inbound traffic are subject to the rules for outbound traffic
 
 ## Jenkins on AWS
-- 
+-

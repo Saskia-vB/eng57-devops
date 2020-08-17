@@ -48,3 +48,17 @@
 - view previous documentation (cf eng57-multi-vagrant repo README)
 - Github webhook: http://instance_public_IP:8080/github-webhook/
   - had to delete and re input before it worked
+- Under jenkins configuration put the https link as your repository url (not ssh)
+
+### Trouble shooting
+- problem ssh-ing:
+  - check IGW association
+  - check subnet association with NACL
+- can't run provision (after chmod):
+  - add all traffic to SG outbound rules
+- cannot get posts:
+  - check $DB_HOSTS updated with private ip of DB
+    - cd ~
+    - cat .bashrc
+    - sudo nano .bashrc
+  - 
