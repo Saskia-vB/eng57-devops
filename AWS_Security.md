@@ -6,7 +6,6 @@
 - DDOS attacks and how to protect against them
 - Management services: Amazon Inspector and Guard duty
 
-
 ## Securing EC2 resources
 - EC2 is the virtual server, the instances
 
