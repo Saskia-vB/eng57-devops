@@ -291,3 +291,46 @@ Advantage of cost protection: DDoS cost protection protects you against public-f
 - reconnaissance: issues discovered based on ongoing analysis
 - instance compromise
 - account compromise
+
+
+# Securing Applications on AWS
+
+## Web application firewall and API gateway
+- allow you to control/filter traffic that comes into AWS from the outside world which is useful to use on load balancers and API gateway
+
+### What is the Web Applicaton Firewall?
+- the WAF allows you to control access to your public-facing content
+- WAF behaviour: allows all requests except threats that you don't want in, blocks all requests excepts all allowed requests, count requests and makes a decision
+
+### WAF integration
+- application load balancer has to be the application load balancer, you can put an IP address filter in front of application load balancer
+- API gateway
+- CloudFront: natural fit, accessing your application and you want to control that traffic flow
+
+### Creating WAF rules and conditions
+#### Web ACL Application
+- AWS > Security, Identity & compliance > Web ACL
+- create web ACL
+- 2 options: application load balancer or API gateway
+- if load balancer: select a resource to associate with
+- if IGW: select process you want to protect from
+- AWS > network > CloudFront
+- under distribution you can select web ACL
+### WAF integration with AWS services
+- option to connect with AWS Shield
+
+## WAF rules and conditions
+- rules as to the traffic you and don't want in and the conditions that match what you want to protect
+
+### Rules types
+- regular rules: conditions and actions
+  - each regular rule must have at least one condition
+- rate based rules - count incoming requests  
+
+### Conditions Use Characteristics
+- IP addresses: you can define the range of addresses not getting to application/ API gateway
+- countries: countries considered Threats
+- request header values: something in the header itself, something you're seeing in the requests coming in that seem a constant threat
+- regex pattern: if that pattern comes in, traffic is not getting in
+- malicious SQL code
+- malicious scripts
