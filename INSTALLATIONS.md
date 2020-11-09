@@ -78,11 +78,12 @@ $ node seeds.js
 $ pm2 stop
 $ pm2 start
 
-
 ### To run a file
 i.e. a provision file
 $ ./provision.sh
 - you may have to change permissions with chmod
+
+### Jenkins
 
 #### Install Jenkins
 - wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
@@ -95,9 +96,18 @@ $ ./provision.sh
 - sudo systemctl start jenkins
 - sudo systemctl status jenkins
 
-
 #### Unlocking jenkins
 - access Jenkins from instance_public_IP:8080
 - to unlock jenkins:
   - in command line: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   - copy paste output onto jenkins page
+
+### Docker
+- prerequisite: brew
+### Docker-compose:
+$ brew install docker-compose
+- this has dependencies on docker and docker machine so will install everything you need.
+### Docker
+$ brew install docker
+### Docker-machine
+$ brew install docker-machine
